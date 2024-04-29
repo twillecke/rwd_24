@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body style="text-align: left; margin: 80px 200px; background-color: azure;">
+  <h1 name="title" >Atividade 3</h1>
+  <div>
+    <div>
+      <input class="input" id="x" placeholder="int x" type="number">
+    </div>
+    <div>
+      <input class="input" id="y" placeholder="int y" type="number">
+    </div>
+    <button type="button" onclick="sum()">Somar</button>
+    <div>
+      <span>
+        Total:
+      </span>
+      <span id="total">
+        0
+      </span>
+    </div>
+  </div>
+  <div>
+    <button name="btn1" onclick="changeById()">Alterar por id</button>
+    <button onclick="changeByName()">Alterar por name</button>
+    <button onclick="changeByClass()">Alterar por classe</button>
+  </div>
+
+    <nav style="display: inline">
+      <ul style="list-style-type: none; font-size: large;">
+        <li>
+          <a href="index.html"><b>Animal de Estimação</b></a>
+        </li>
+        <li>
+          <a href="letter.html"><b>Carta</b></a>
+        </li>
+        <li>
+          <a href="atividade_3.html"><b>Contato</b></a>
+        </li>
+      </ul>
+    </nav>
+  </body>
+  <script>
+    alert("Olá, mundo!");
+    function sum(){
+      let x = parseInt(document.getElementById("x").value);
+      let y = parseInt(document.getElementById("y").value);
+      let sumResult = x + y;
+      let total = document.getElementById("total");
+      total.innerHTML = sumResult;
+    }
+    changeById = () => {
+      let element = document.getElementById("total");
+      element.style.font = "italic bold 20px arial,serif";
+    }
+    changeByName = () => {
+      let element = document.querySelector('button[name=btn1');
+      element.style.backgroundColor = 'blue';
+    }
+    changeByClass = () => {
+      let element = document.querySelector('.input');
+      element.style.backgroundColor = 'red';
+    }
+  </script>
+</html>
+
+<!-- mensagem ola mundo -->
+<!-- saida de soma de dois itneiros -->
+<!-- alterar prop de um elemento por id, name e classe -->
